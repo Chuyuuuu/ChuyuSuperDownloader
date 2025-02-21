@@ -29,7 +29,17 @@
 
 如果你希望为本项目贡献代码或修复bug，欢迎提交Pull Request。
 
+## 更新日志
+2025/2/21 第一个包含基础功能的alpha版本发布
+
+### 下个版本更新内容 Pending
+1.将更新自定义代理功能
+2.关于页面内容改为可点击超链接
+3.添加NINA插件和Siril脚本的一键安装功能
+
 ## 注意事项
 
 - 本工具需要 `.NET Framework` 环境支持，确保你的系统中安装了最新版本的 `.NET`。
 - 部分软件可能需要额外的安装步骤，具体请参考软件的官方文档。
+  ![3a87f630-3fc7-48a2-a6e9-0b732e1860bb](https://github.com/user-attachments/assets/4ab2c791-5cc6-47f6-b6a7-48dece436d8a)
+  【【⚡开源⚡】天文主流软件与驱动一键下载工具】 https://www.bilibili.com/video/BV1CqPce3ELE/?share_source=copy_web&vd_source=42a7223a5d4114a74fe0f62161760376
