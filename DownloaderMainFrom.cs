@@ -28,7 +28,6 @@ namespace AstronomySoftwareDownloader
 
         public DownloaderMainFrom()
         {
-            this.Icon = new Icon("bin/chuyu.ico");
             this.AutoScaleMode = AutoScaleMode.Dpi;
             InitializeComponent();
             CheckAria2c();
@@ -501,7 +500,7 @@ namespace AstronomySoftwareDownloader
             string downloadUrl = await GetLatestSirilDownloadUrlAsync("https://siril.org/");
             if (!string.IsNullOrEmpty(downloadUrl))
             {
-                await DownloadAndInstallSoftware(downloadUrl, Path.GetFileName(downloadUrl), true);
+                await DownloadAndInstallSoftware(downloadUrl, Path.GetFileName(downloadUrl), false);
             }
             else
             {
@@ -1061,23 +1060,6 @@ namespace AstronomySoftwareDownloader
             }
         }
 
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 实用功能ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             string wubPath = Path.Combine(Application.StartupPath, "bin", "wub.exe");
@@ -1230,6 +1212,33 @@ namespace AstronomySoftwareDownloader
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
+        }
+
+        //引用天文摄影计算器，已经获得原作者@Garth授权，项目地址：https://github.com/GarthTB/AstrophotoCalculator
+        private void 天文摄影计算器ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string wubPath = Path.Combine(Application.StartupPath, "bin", "AstrophotoCalculator.exe");
+
+            if (File.Exists(wubPath))
+            {
+                try
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo(wubPath)
+                    {
+                        UseShellExecute = true
+                    };
+                    Process.Start(startInfo);
+                    lblStatus.Text = "已启动 AstrophotoCalculator.exe。";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"启动 AstrophotoCalculator.exe 时出错：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("未找到 AstrophotoCalculator.exe 文件！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

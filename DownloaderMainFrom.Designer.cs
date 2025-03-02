@@ -34,6 +34,7 @@
             唤起NINA插件目录ToolStripMenuItem = new ToolStripMenuItem();
             唤起Siril插件目录ToolStripMenuItem = new ToolStripMenuItem();
             木星拍摄时长计算ToolStripMenuItem = new ToolStripMenuItem();
+            天文摄影计算器ToolStripMenuItem = new ToolStripMenuItem();
             关于软件ToolStripMenuItem = new ToolStripMenuItem();
             label2 = new Label();
             btnDownloadASIASCOM = new Button();
@@ -164,7 +165,6 @@
             label1.Size = new Size(154, 24);
             label1.TabIndex = 9;
             label1.Text = "天文摄影实用程序";
-            label1.Click += label1_Click;
             // 
             // menuStrip1
             // 
@@ -178,11 +178,11 @@
             // 
             // 实用功能ToolStripMenuItem
             // 
-            实用功能ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1, 手动进行Aria2下载ToolStripMenuItem, 编辑Aria2下载器配置ToolStripMenuItem, 唤起NINA插件目录ToolStripMenuItem, 唤起Siril插件目录ToolStripMenuItem, 木星拍摄时长计算ToolStripMenuItem });
+            实用功能ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1, 手动进行Aria2下载ToolStripMenuItem, 编辑Aria2下载器配置ToolStripMenuItem, 唤起NINA插件目录ToolStripMenuItem, 唤起Siril插件目录ToolStripMenuItem, 木星拍摄时长计算ToolStripMenuItem, 天文摄影计算器ToolStripMenuItem });
             实用功能ToolStripMenuItem.Name = "实用功能ToolStripMenuItem";
             实用功能ToolStripMenuItem.Size = new Size(98, 28);
             实用功能ToolStripMenuItem.Text = "辅助功能";
-            实用功能ToolStripMenuItem.Click += 实用功能ToolStripMenuItem_Click;
+
             // 
             // toolStripMenuItem1
             // 
@@ -225,6 +225,13 @@
             木星拍摄时长计算ToolStripMenuItem.Size = new Size(297, 34);
             木星拍摄时长计算ToolStripMenuItem.Text = "木星拍摄时长计算";
             木星拍摄时长计算ToolStripMenuItem.Click += 木星拍摄时长计算ToolStripMenuItem_Click;
+            // 
+            // 天文摄影计算器ToolStripMenuItem
+            // 
+            天文摄影计算器ToolStripMenuItem.Name = "天文摄影计算器ToolStripMenuItem";
+            天文摄影计算器ToolStripMenuItem.Size = new Size(297, 34);
+            天文摄影计算器ToolStripMenuItem.Text = "天文摄影计算器";
+            天文摄影计算器ToolStripMenuItem.Click += 天文摄影计算器ToolStripMenuItem_Click;
             // 
             // 关于软件ToolStripMenuItem
             // 
@@ -534,7 +541,6 @@
             MaximizeBox = false;
             Name = "DownloaderMainFrom";
             Text = "初雨的超级天文软件下载器";
-            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -587,6 +593,7 @@
         private Button btnDownloadAutoStakkert;
         private Button btnDownloadRegistax;
         private Button btnDownloadSiril;
+        private ToolStripMenuItem 天文摄影计算器ToolStripMenuItem;
     }
 }
 
